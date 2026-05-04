@@ -8,7 +8,7 @@ export const Ai = () => {
     const recognitionRef = useRef(null);
 
     useEffect(() => {
-        wsref.current = new WebSocket("ws://ai-calling-agent-drnt.onrender.com");
+        wsref.current = new WebSocket("wss://ai-calling-agent-drnt.onrender.com");
         wsref.current.onopen = () => console.log('Connected to AI Server');
 
         wsref.current.onmessage = (event) => {
